@@ -1,0 +1,222 @@
+.--larrgura-maxima{
+    width: 100%; 
+}
+.--largura-grande{
+    width: 80%;
+}
+.botao { /*propriedades para a palavra ACESSE*/
+    font-size: .8rem;
+    font-weight: 700;
+    letter-spacing: 2.9;
+    text-transform: uppercase;
+    padding:1rem 40px;
+    margin-top: .5rem;
+    margin-bottom: .5rem;
+    border-radius: 6px;
+    transition: .25s;
+    }
+.botao:hover{
+    transform: translate(0, .22rem);
+    transition: .25s;
+}
+
+.cursos {
+    color: #000000;
+    text-align:center;
+    background-image: url(../img3/backg/mobak.png);
+    background-size: cover;
+    padding-top: 9.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.cursos__chamada{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.chamada__titulo{
+    color: #211113;
+    font-weight: 800;
+    font-size: 1.2rem;
+    margin-bottom: .3rem;
+}
+.chamada__titulo--destaque{
+	color: #e93d50;
+}
+.chamada__p{
+    font-weight: 700;
+	line-height: 1.3;
+	margin: 1rem 0;
+	}
+.chamada__cursos__matricula	{
+ 	color: #000000;
+    background-color: #e93d50;
+    }
+.cursos__lista{
+    /*SOBRE TEXTO*/
+    font-size: .7rem;
+    font-weight: 600;
+    text-align: center;
+
+     /*MARGEM DE TODA LISTA CIMA E BAIXO*/
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+
+       /*DEFINICAO DE GRELHAS E BORDAS*/
+    display: grid;
+    grid-template-columns: 7rem 7rem;
+    grid-template-rows: repeat(5,4.5rem);
+    grid-gap:.5rem;
+     }
+
+.cursos__lista li{ /*BORDAS E SUAS LINHAS*/
+	border: 2px	solid	#ff0101e3;
+	border-radius: 10px;
+    box-sizing:	border-box;
+	display: flex;
+    align-items: center;
+    justify-content: space-around;
+    background-repeat: no-repeat;
+   
+    /*TAMANHO E POSICAO DOS ICONS*/
+	background-size: 1.9rem 1.9rem; /*tamanho*/
+	background-position: top .3rem center;/* posicao*/
+ /*ESPACAMENTOS ENTRE O ICON-TEXTO DOS CURSOS*/
+    width: 5.7rem;
+    height: 4.7rem;
+    padding:3.3rem 0rem .7rem;
+ /* FIM ESPACAMENTOS ENTRE O ICON-TEXTO DOS CURSOS*/
+    transition: .25s;
+   	}
+.cursos__lista li:hover	{
+    transform:	translate(0, .22rem);
+    background-color: rgba(206, 16, 136, 0.648);
+    transition:	.25s;
+    }
+
+.curso--administrativo{
+    background-image: url("../img3/icon/icona.png");
+}
+.curso--penal{
+    background-image: url("../img3/icon/iconb.png");
+}
+.curso--civil{
+    background-image: url("../img3/icon/iconc.png");
+}
+.curso--constitucional{
+    background-image: url("../img3/icon/icond.png");
+}
+.curso--contencioso{
+	background-image: url("../img3/icon/icone.png");
+}
+.curso--laboral{
+	background-image: url("../img3/icon/iconf.png");
+}
+.curso--sucessoes{
+	background-image: url("../img3/icon/icong.png");
+}
+.curso--tributario{
+	background-image: url("../img3/icon/iconh.png");
+}
+.curso--dip{
+    background-image: url("../img3/icon/iconi.png");
+}
+.curso--criminologia{
+    background-image: url("../img3/icon/iconj.png");
+}
+
+@media(min-width:768px){
+.cursos	{
+	padding: 6rem 5% 0;
+	background-image: url(../img3/backg/deskback.png);
+	}
+.cursos__chamada{
+	width: 300px;
+    align-items: flex-start;
+	align-self: flex-start;
+	text-align: left;
+	}
+.chamada__titulo{
+	font-size: 2rem;
+	}
+.chamada__cursos__matricula{
+	display:none;
+    }
+.cursos__lista{
+	grid-template-columns: repeat(5, 7rem);/*o primeiro define colunas, o segundo o tamanho delas */
+	grid-template-rows:/*especifica o espacamento abaixo partindo da propria linha e empurra tudo que estiver por baixo*/
+     7.5rem /* so das colunas de cima */
+     5.5rem/* so das colunas de baixo */
+     5.5rem;/* de ambas*/
+    gap: .8rem; /*escolhe o espacamento lateral entre as colunas*/
+    font-weight: 700;
+	}
+.cursos__lista li{
+    background-repeat: no-repeat;
+	background-size: 3.7rem 3.7rem;/*estica os icones*/
+    font-size: 0.85rem;
+    align-items: center;
+       
+                    /* MODIFICAÇAO DA BORDA SUPERIOR, INFERIOR E LATERAIS*/
+      
+}
+
+.curso--destaque{
+    order: -1; /*controla a ordem que o elemento ira aparecer: primeiros: -1 ou nos ultimos:1*/
+    background-color: rgb(125, 222, 200);
+	}
+}
+@media(min-width:1200px){
+.cursos	{
+    padding: 7rem 10% 0;
+	}
+.cursos__chamada{
+	width: 450px;
+    width: 300px;
+    align-items: flex-start;
+	align-self: flex-start;
+	text-align: left;
+    font-size: 50;
+    font-size: larger;
+    font-weight: bolder 900;
+    
+	}
+.chamada__titulo{
+	font-weight: bolder;
+    font-size: 1.5rem;
+	}
+.cursos__lista {
+    grid-template-columns: repeat(4,12.9rem); /* entre parenteses: o primeiro indica quantas colunas, o segundo o seu tamanho*/
+    grid-template-rows: 12.5rem 17.5rem 12.5rem 0rem;/*LINHAS*/
+    font-weight: bolder;
+    font-size: 1.5rem;
+	}
+.cursos__lista li{
+	background-repeat: no-repeat;
+    background-size: 5rem 5rem;/*ICONS*/
+    font-weight: bolder;
+    font-size: 1.5rem;
+    padding: 6rem;
+    padding-top:7rem ;
+      	}
+.cursos__lista .curso--destaque{
+    grid-template-columns: repeat(4,12.9rem); /* entre parenteses: o primeiro indica quantas colunas, o segundo o seu tamanho*/
+    grid-template-rows: 12.5rem 17.5rem 12.5rem 0rem;/*LINHAS*/
+	background-size: 5rem 5rem;
+	font-weight: bolder;
+    font-size: 1.5rem;
+    padding-top:7rem ;
+	}
+.cursos__lista .curso--destaque2{
+    grid-template-columns: repeat(4,12.9rem); /* entre parenteses: o primeiro indica quantas colunas, o segundo o seu tamanho*/
+    grid-template-rows: 12.5rem 17.5rem 12.5rem 0rem;/*LINHAS*/
+    order: -1;
+	grid-area: 1/4/span	2/5;
+	background-size: 5rem 5rem;
+    font-weight: bolder;
+    font-size: 1.5rem;
+    padding-top:7rem ;
+}
+
+}
